@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
+
+    background:
+    radial-gradient(circle at top,#7ddc5a 0%,#31572c 25%,#1b4332 55%,#081c15 100%);
+}
+
+/* Gym Light Effect */
+body::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,
+    rgba(180,255,120,.25),
+    transparent 70%);
+    top:-250px;
+    left:-180px;
+    animation:lightMove 8s ease-in-out infinite;
+}
+
+/* Gym Floor */
+body::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:170px;
+
+    background:repeating-linear-gradient(
+    90deg,
+    #1d2d44 0px,
+    #1d2d44 45px,
+    #283618 45px,
+    #283618 90px);
+
+    opacity:.35;
+}
+
+/* Main Card */
+.container{
+
+    position:relative;
+    z-index:10;
+
+    width:420px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:2px solid rgba(160,255,130,.4);
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.45),
+    inset 0 0 20px rgba(160,255,130,.08);
+
+}
+
+/* Heading */
+
+h2{
+
+    text-align:center;
+
+    color:#d8ffb8;
+
+    font-size:30px;
+
+    margin-bottom:30px;
+
+    text-shadow:0 0 18px rgba(180,255,120,.7);
+
+}
+
+/* Inputs */
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    background:rgba(255,255,255,.92);
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    transform:scale(1.02);
+
+    box-shadow:0 0 18px #9ef01a;
+
+}
+
+input::placeholder{
+
+    color:#555;
+
+}
+
+/* Button */
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:linear-gradient(
+    90deg,
+    #40916c,
+    #74c69d,
+    #95d5b2);
+
+    transition:.35s;
+
+    letter-spacing:1px;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(116,198,157,.55);
+
+}
+
+/* Result */
+
+#result{
+
+    margin-top:25px;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.18);
+
+    color:#ffffff;
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    border:1px solid rgba(255,255,255,.2);
+
+}
+
+#result b{
+
+    color:#caff70;
+
+    font-size:28px;
+
+}
+
+/* Animation */
+
+@keyframes lightMove{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    50%{
+
+        transform:translateX(120px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
