@@ -38,6 +38,8 @@ A collection of **20 beginner-friendly JavaScript mini projects** built using **
 
 ---
 
+Video Link : https://drive.google.com/file/d/1ljmmESRJG6lcZZDEIp0MuJPWWu6UVo0p/view?usp=sharing
+
 ## 📚 JavaScript Concepts Covered
 
 - Variables
